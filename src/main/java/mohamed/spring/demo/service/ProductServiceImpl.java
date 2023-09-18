@@ -31,24 +31,12 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto getById(int id) {
-        return modelMapper.map(productRepo.getById(id),ProductDto.class);
+        return modelMapper.map(productRepo.findById(id),ProductDto.class);
     }
 
-    @Override
-    public void update(int id, Product p) {
-        productRepo.update(id,p);
-
-    }
-
-    @Override
-    public void delete(int id) {
-        productRepo.delete(id);
-
-    }
 
     @Override
     public void save(Product p) {
         productRepo.save(p);
-
     }
 }

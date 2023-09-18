@@ -1,16 +1,13 @@
 package mohamed.spring.demo.repo;
 
 import mohamed.spring.demo.domain.Product;
+import mohamed.spring.demo.domain.Review;
+import org.springframework.data.repository.CrudRepository;
+
 import java.util.List;
 
-public interface ProductRepo {
+public interface ProductRepo extends CrudRepository<Product,Integer> {
+
     List<Product> findAll();
 
-    Product getById(int id);
-
-    void update(int id,Product p);
-
-    void delete(int id);
-
-    void save(Product p);
 }

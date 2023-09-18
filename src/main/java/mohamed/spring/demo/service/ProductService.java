@@ -10,10 +10,6 @@ public interface ProductService {
 
     ProductDto getById(int id);
 
-    void update(int id,Product p);
-
-    void delete(int id);
-
     void save(Product p);
 }
 
